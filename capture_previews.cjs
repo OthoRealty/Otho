@@ -39,6 +39,28 @@ async function capture() {
     });
   }
 
+  // 2B. Projects Explorer
+  console.log('Capturing Projects Explorer...');
+  const projects = await page.$('#projects');
+  if (projects) {
+    await projects.scrollIntoView();
+    await new Promise(r => setTimeout(r, 800));
+    await page.screenshot({
+      path: path.join(ARTIFACT_DIR, '03_projects_explorer.png')
+    });
+  }
+
+  // 2C. Loading Calculator
+  console.log('Capturing Loading Calculator...');
+  const calculator = await page.$('#calculator');
+  if (calculator) {
+    await calculator.scrollIntoView();
+    await new Promise(r => setTimeout(r, 800));
+    await page.screenshot({
+      path: path.join(ARTIFACT_DIR, '04_loading_calculator.png')
+    });
+  }
+
   // 3. Expertise
   console.log('Capturing Expertise...');
   const expertise = await page.$('#expertise');
@@ -46,7 +68,7 @@ async function capture() {
     await expertise.scrollIntoView();
     await new Promise(r => setTimeout(r, 800));
     await page.screenshot({
-      path: path.join(ARTIFACT_DIR, '03_expertise.png')
+      path: path.join(ARTIFACT_DIR, '05_expertise.png')
     });
   }
 
@@ -57,7 +79,7 @@ async function capture() {
     await hyderabad.scrollIntoView();
     await new Promise(r => setTimeout(r, 800));
     await page.screenshot({
-      path: path.join(ARTIFACT_DIR, '04_hyderabad_focus.png')
+      path: path.join(ARTIFACT_DIR, '06_hyderabad_focus.png')
     });
   }
 
