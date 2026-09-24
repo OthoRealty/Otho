@@ -1,10 +1,12 @@
-import { InsightArticle } from '../types';
+import { InsightArticle } from '@/types';
 
 export const INSIGHTS: InsightArticle[] = [
   {
     id: 'insight-1',
     category: 'HYDERABAD',
     title: 'The Vertical Evolution of West Hyderabad: Deciphering the Neopolis Density Model',
+  slug: 'the-vertical-evolution-of-west-hyderabad-deciphering-the-neopolis-density-model',
+  publishStatus: 'published',
     date: 'Quarterly Research Note',
     readTime: '6 min read',
     summary: 'An analytical review of how Hyderabad’s unlimited FSI policy and institutional infrastructure planning have positioned Neopolis as South India’s most ambitious vertical business district.',
@@ -24,6 +26,8 @@ export const INSIGHTS: InsightArticle[] = [
     id: 'insight-2',
     category: 'INVESTMENT',
     title: 'Institutional Grade-A Office Absorption vs. Emerging Commercial Micro-Markets',
+  slug: 'institutional-grade-a-office-absorption-vs-emerging-commercial-micro-markets',
+  publishStatus: 'published',
     date: 'Strategic Intelligence Brief',
     readTime: '5 min read',
     summary: 'Examining the flight to quality among multinational corporate tenants and its downstream impact on commercial real estate yields in Financial District and surrounding corridors.',
@@ -43,6 +47,8 @@ export const INSIGHTS: InsightArticle[] = [
     id: 'insight-3',
     category: 'DEVELOPMENT',
     title: 'Land Assembly Dynamics: Structuring Joint Development Agreements in High-Growth Vectors',
+  slug: 'land-assembly-dynamics-structuring-joint-development-agreements-in-high-growth-vectors',
+  publishStatus: 'published',
     date: 'Advisory Whitepaper',
     readTime: '7 min read',
     summary: 'A strategic framework for landowners and institutional developers navigating land titling, development rights, revenue-share mechanics, and regulatory compliance.',
@@ -62,6 +68,8 @@ export const INSIGHTS: InsightArticle[] = [
     id: 'insight-4',
     category: 'MARKET',
     title: 'The Shift Toward Low-Density Villa Enclaves in the Shadow of the Skyscraper Boom',
+  slug: 'the-shift-toward-low-density-villa-enclaves-in-the-shadow-of-the-skyscraper-boom',
+  publishStatus: 'published',
     date: 'Market Intelligence Report',
     readTime: '4 min read',
     summary: 'Why executive buyers and multi-generational families are driving resilient demand for gated villa communities along the Gandipet and Narsingi corridors.',
@@ -81,6 +89,8 @@ export const INSIGHTS: InsightArticle[] = [
     id: 'insight-5',
     category: 'ADVISORY',
     title: 'Navigating Hyderabad Real Estate with Clarity: Moving Beyond Generic Brokerage',
+  slug: 'navigating-hyderabad-real-estate-with-clarity-moving-beyond-generic-brokerage',
+  publishStatus: 'published',
     date: 'Corporate Philosophy Brief',
     readTime: '4 min read',
     summary: 'Why high-value real estate decisions demand research-backed evaluation, disciplined financial modeling, and an institutional mindset rather than transactional sales pressure.',

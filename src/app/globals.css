@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors stored as R G B triplets for Tailwind opacity support */
+    --color-background: 250 248 245;
+    --color-foreground: 11 18 34;
+    --color-primary: 11 18 34;
+    --color-primary-foreground: 250 248 245;
+    --color-accent: 197 162 93;
+    --color-accent-foreground: 11 18 34;
+    --color-muted: 245 240 235;
+    --color-muted-foreground: 138 143 152;
+    --color-border: 229 224 216;
+    --color-card: 255 255 255;
+    --color-card-foreground: 11 18 34;
+    --color-ring: 197 162 93;
+  }
+
+  .dark {
+    --color-background: 8 11 17;
+    --color-foreground: 245 240 235;
+    --color-primary: 197 162 93;
+    --color-primary-foreground: 8 11 17;
+    --color-accent: 212 175 110;
+    --color-accent-foreground: 8 11 17;
+    --color-muted: 21 27 40;
+    --color-muted-foreground: 138 143 152;
+    --color-border: 30 38 54;
+    --color-card: 15 21 32;
+    --color-card-foreground: 245 240 235;
+    --color-ring: 212 175 110;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    background-color: rgba(197, 162, 93, 0.3);
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(138, 143, 152, 0.3);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(138, 143, 152, 0.5);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-reveal {
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}

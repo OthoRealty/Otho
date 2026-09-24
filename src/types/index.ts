@@ -1,4 +1,5 @@
 export interface ServiceItem {
+  slug: string;
   id: string;
   number: string;
   title: string;
@@ -8,6 +9,7 @@ export interface ServiceItem {
 }
 
 export interface GrowthCorridor {
+  slug: string;
   id: string;
   name: string;
   badge: string;
@@ -25,6 +27,9 @@ export interface GrowthCorridor {
 }
 
 export interface ProjectReview {
+  slug: string;
+  publishStatus: 'published' | 'draft';
+  featuredOrder?: number;
   id: number;
   name: string;
   developer: string;
@@ -33,6 +38,8 @@ export interface ProjectReview {
   sba: number; // Super built-up area (sq ft)
   carpet: number; // RERA usable carpet area (sq ft)
   rate: number; // Quoted rate ₹ / sq ft
+  priceRangeCr: string; // Total investment range e.g. "₹2.68 Cr - ₹4.50 Cr"
+  luxuryTier: string; // e.g. "Ultra-Luxury Skyscraper", "Signature Lakefront"
   landShare: number; // Land share per unit
   possession: string;
   status: string;
@@ -63,6 +70,8 @@ export interface Opportunity {
 }
 
 export interface InsightArticle {
+  slug: string;
+  publishStatus: 'published' | 'draft';
   id: string;
   category: 'MARKET' | 'INVESTMENT' | 'DEVELOPMENT' | 'HYDERABAD' | 'ADVISORY';
   title: string;
